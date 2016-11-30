@@ -1,6 +1,9 @@
 import { FETCH_WEATHER } from '../actions/index';
 
 export default function(state = [], action) {
+
+  console.log('action:', action);
+
   switch (action.type) {
   case FETCH_WEATHER:
     // DONT mutate state (aka state.push(action.payload.data)), concat doesn't mutate, rather returns a new array
